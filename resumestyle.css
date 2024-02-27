@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    user-select: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.centered {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2, h4 {
+    color: #333;
+    margin: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000000; /* Add a bottom border */
+    padding-bottom: 5px; /* Add some space between the heading and the border */
+    display: flex;
+    justify-content: space-between;
+}
+
+h3{
+    color: #000000;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    color: #000000;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center your name */
+    align-items: center;
+}
+
+.name-address {
+    text-align: center; /* Center your address, LinkedIn, and GitHub links */
+    margin-bottom: 10px;
+}
+
+.date {
+    font-size: 14px; /* Adjust the font size of the date */
+    color: #000000; /* Adjust the color of the date */
+    margin-left: 10px; /* Add some space between the title and the date */
+    white-space: nowrap; /* Ensure the date stays in one line */
+}
+
+p {
+    color: #000000;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.subsection {
+    /* margin-left: 20px; */
+    margin-bottom: 10px;
+}
+
+.subsection-title {
+    font-size: 16px; /* Adjust font size */
+    margin-bottom: 5px;
+    word-wrap: break-word; /* Allow long titles to break into multiple lines */
+}
