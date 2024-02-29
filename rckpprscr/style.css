@@ -76,3 +76,52 @@ display: flex;
     font-size: 50px;
     margin-top: 5rem;
   }
+
+  /* For screens smaller than 600px (typical smartphones) */
+@media only screen and (max-width: 600px) {
+  h1 {
+      font-size: 50px; /* Decrease font size for heading */
+  }
+
+  .choice {
+      height: 100px; /* Decrease height for choices */
+      width: 100px; /* Decrease width for choices */
+      gap: 2rem; /* Decrease gap between choices */
+  }
+
+  img {
+      height: 80px; /* Decrease height for images */
+      width: 80px; /* Decrease width for images */
+  }
+
+  .choices {
+      flex-direction: column; /* Stack choices vertically */
+      margin-top: 2rem; /* Adjust margin for choices */
+      gap: 2rem; /* Decrease gap between choices */
+  }
+
+  .score-board {
+      flex-direction: column; /* Stack score board vertically */
+      margin-top: 2rem; /* Adjust margin for score board */
+      gap: 2rem; /* Decrease gap between score board items */
+  }
+
+  #user-score,
+  #comp-score {
+      font-size: 2rem; /* Decrease font size for scores */
+  }
+
+  .msg-container {
+      margin-top: 2rem; /* Adjust margin for message container */
+  }
+
+  #msg {
+      font-size: 1.5rem; /* Decrease font size for message */
+      padding: 1rem; /* Adjust padding for message */
+  }
+
+  h2 {
+      font-size: 30px; /* Decrease font size for secondary heading */
+      margin-top: 2rem; /* Adjust margin for secondary heading */
+  }
+}
