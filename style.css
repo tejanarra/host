@@ -216,3 +216,68 @@ footer {
     color: var(--hover-color);
 }
 
+/* For screens smaller than 600px (typical smartphones) */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    header {
+        margin-bottom: 20px; /* Reduce margin for header */
+    }
+
+    h1 {
+        font-size: 28px; /* Decrease font size for header */
+    }
+
+    .subtitle {
+        font-size: 16px; /* Decrease font size for subtitle */
+        margin-bottom: 10px; /* Reduce margin for subtitle */
+    }
+
+    .content {
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%; /* Make both sections full width */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    .subsection {
+        margin-bottom: 10px; /* Reduce margin for subsections */
+    }
+
+    .profile-image {
+        width: 100px; /* Decrease profile image size */
+        height: 100px;
+    }
+
+    .mini-projects {
+        margin-bottom: 20px; /* Reduce margin for mini projects */
+    }
+
+    .mini-projects a {
+        font-size: 16px; /* Decrease font size for mini projects */
+    }
+
+    footer {
+        flex-direction: column; /* Stack footer content vertically */
+        text-align: center; /* Center align footer content */
+    }
+
+    .footer-content {
+        margin-top: 20px; /* Adjust margin for footer content */
+    }
+
+    .footer-content ul {
+        flex-direction: column; /* Stack footer links vertically */
+    }
+
+    .footer-content ul li {
+        margin-bottom: 10px; /* Reduce margin for footer links */
+    }
+}
+
+
