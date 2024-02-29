@@ -39,3 +39,31 @@ h1 {
     justify-content: center;
 
 }
+
+/* For screens smaller than 600px (typical smartphones) */
+@media only screen and (max-width: 600px) {
+    .game {
+        height: 80vmin; /* Decrease height for game board */
+        width: 80vmin; /* Decrease width for game board */
+        gap: 1vmin; /* Decrease gap between boxes */
+    }
+
+    .box {
+        width: 22vmin; /* Decrease width for boxes */
+        height: 22vmin; /* Decrease height for boxes */
+        border-radius: 2vmin; /* Adjust border radius for boxes */
+        font-size: 4vmin; /* Decrease font size for box content */
+    }
+
+    .container {
+        height: 60vh; /* Maintain container height */
+    }
+
+    h1 {
+        font-size: 5vmin; /* Decrease font size for headings */
+    }
+
+    #reset {
+        font-size: 4vmin; /* Decrease font size for reset button */
+    }
+}
