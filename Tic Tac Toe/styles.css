@@ -1,69 +1,76 @@
-.game {
-    border: none;
-    color: white;
-    height: 60vmin;
-    width: 60vmin;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-    gap: 1.5vmin;
-}
-
-.box {
-    width: 18vmin;
-    height: 18vmin;
-    background-color: white;
-    border-radius: 1vmin;
-    color: black;
-    border-color: black;
-}
-
+/* General styles */
 body {
     background-color: #F39C6B;
     text-align: center;
+    font-family: Arial, sans-serif;
 }
 
-h1 {
-    text-align: center;
+h1, h2 {
     color: #083D77;
-}
-
-#reset {
-    background-color:#9bb768
+    font-size: 5vmin;
 }
 
 .container {
-    height: 60vh;
     display: flex;
     justify-content: center;
-
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
-/* For screens smaller than 600px (typical smartphones) */
+.game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vmin;
+    width: 80vmin;
+    height: 80vmin;
+}
+
+.box {
+    width: 22vmin;
+    height: 22vmin;
+    background-color: white;
+    border-radius: 2vmin;
+    color: black;
+    border: none;
+    font-size: 4vmin;
+}
+
+#reset {
+    font-size: 4vmin;
+    background-color: #9bb768;
+    padding: 1vmin 2vmin;
+    margin-top: 2vmin;
+}
+
+h1 + h1 {
+    margin-top: 2vmin;
+}
+
+/* Media query for smaller screens */
 @media only screen and (max-width: 600px) {
+    h1, h2 {
+        font-size: 7vmin;
+    }
+
     .game {
-        height: 80vmin; /* Decrease height for game board */
-        width: 80vmin; /* Decrease width for game board */
-        gap: 1vmin; /* Decrease gap between boxes */
+        width: 90vmin;
+        height: 90vmin;
     }
 
     .box {
-        width: 22vmin; /* Decrease width for boxes */
-        height: 22vmin; /* Decrease height for boxes */
-        border-radius: 2vmin; /* Adjust border radius for boxes */
-        font-size: 4vmin; /* Decrease font size for box content */
-    }
-
-    .container {
-        height: 60vh; /* Maintain container height */
-    }
-
-    h1 {
-        font-size: 5vmin; /* Decrease font size for headings */
+        width: 26vmin;
+        height: 26vmin;
+        font-size: 5vmin;
     }
 
     #reset {
-        font-size: 4vmin; /* Decrease font size for reset button */
+        font-size: 5vmin;
+        padding: 2vmin 3vmin;
+    }
+
+    h1 + h1 {
+        margin-top: 3vmin;
     }
 }
