@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+ .countrySelect{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+.countrySelect i {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .selfrom, .selto{
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+    
+}
+
+#finalval{
+    margin-top: 2rem;
+} 
+
+button{
+    background-color: #9A4C95;
+    height: 5vmin;
+    width: 15vmin;
+    color: white;
+    margin-top: 2rem;
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    background-color: #4D2D52;
+}
+
+.headings{
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+}
+
+form {
+    margin: 2rem 0 1rem 0;
+  }
+
+img{
+    height: 4vh;
+    width: 4vh;
+    /* object-fit: contain; */
+}
+
+.container {
+    background-color: #C1A5A9;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 40vh;
+    min-height: 30vh;
+    padding: 2rem;
+    border-radius: 2rem;
+} 
