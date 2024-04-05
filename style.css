@@ -196,6 +196,7 @@ footer {
     border-radius: 50%;
     object-fit: cover;
     transition: 0.3s ease;
+    object-position: 0 0;
 }
 
 .mini-projects {
