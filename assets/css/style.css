@@ -14,6 +14,15 @@ body {
   color: #272829;
 }
 
+/* Style the favicon */
+.favicon {
+  width: 32px; /* Adjust the width and height as needed */
+  height: 32px;
+  border-radius: 50%; /* Optional: Make the favicon circular */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+
 a {
   color: #149ddd;
   text-decoration: none;
