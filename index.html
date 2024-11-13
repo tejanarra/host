@@ -339,7 +339,6 @@
         </div>
         <div class="my-3">
             <div class="loading">Loading</div>
-            <div class="error-message" style="display: none;">Something went wrong. Please try again later.</div>
             <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
         </div>
         <div class="text-center"><button type="submit">Send Message</button></div>
@@ -363,8 +362,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     // Clear previous messages
     document.querySelector('.sent-message').style.display = 'none';
-    document.querySelector('.error-message').style.display = 'none';
-    document.querySelector('.loading').style.display = 'block';
 
     // Capture the form data
     var formData = new FormData(this);
@@ -381,8 +378,9 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     fetch('https://mnfyqjlyiqyasah.form.io/contact/submission', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json', // Send as JSON
-        },
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'  // Explicitly ask for JSON response
+      },
         body: JSON.stringify(requestData) // Send the data as JSON
     })
     .then(response => {
@@ -394,14 +392,11 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     .then(data => {
         // Handle the response from the server (success)
         console.log('Success:', data);
-        document.querySelector('.loading').style.display = 'none';
         document.querySelector('.sent-message').style.display = 'block';
     })
     .catch((error) => {
         // Handle errors (e.g., failed request)
         console.error('Error:', error);
-        document.querySelector('.loading').style.display = 'none';
-        document.querySelector('.error-message').style.display = 'block';
     });
 });
 </script>
