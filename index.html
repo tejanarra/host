@@ -317,34 +317,34 @@
 
       </div>
 
-      <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-          <div class="row">
+     <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+    <form id="contactForm" method="POST" role="form" class="php-email-form">
+        <div class="row">
             <div class="form-group col-md-6">
-              <label for="name">Your Name</label>
-              <input type="text" name="name" class="form-control" id="name" required>
+                <label for="name">Your Name</label>
+                <input type="text" name="name" class="form-control" id="name" required>
             </div>
             <div class="form-group col-md-6">
-              <label for="email">Your Email</label>
-              <input type="email" class="form-control" name="email" id="email" required>
+                <label for="email">Your Email</label>
+                <input type="email" class="form-control" name="email" id="email" required>
             </div>
-          </div>
-          <div class="form-group">
+        </div>
+        <div class="form-group">
             <label for="subject">Subject</label>
             <input type="text" class="form-control" name="subject" id="subject" required>
-          </div>
-          <div class="form-group">
+        </div>
+        <div class="form-group">
             <label for="message">Message</label>
             <textarea class="form-control" name="message" rows="10" required></textarea>
-          </div>
-          <div class="my-3">
+        </div>
+        <div class="my-3">
             <div class="loading">Loading</div>
             <div class="error-message"></div>
             <div class="sent-message">Your message has been sent. Thank you!</div>
-          </div>
-          <div class="text-center"><button type="submit">Send Message</button></div>
-        </form>
-      </div>
+        </div>
+        <div class="text-center"><button type="submit">Send Message</button></div>
+    </form>
+</div>
 
     </div>
 
@@ -358,6 +358,42 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script>
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting the default way
+
+    // Capture the form data
+    var formData = new FormData(this);
+
+    // Create an object to send with the proper keys
+    var requestData = {
+        yourName: formData.get('name'),       // Capture 'name' field and map to 'yourName'
+        yourEmail: formData.get('email'),     // Capture 'email' field and map to 'yourEmail'
+        subject: formData.get('subject'),     // Capture 'subject' field
+        message: formData.get('message')      // Capture 'message' field
+    };
+
+    // Send the data using Fetch API
+    fetch('https://mnfyqjlyiqyasah.form.io/contact/submission', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json', // Send as JSON
+        },
+        body: JSON.stringify(requestData) // Send the data as JSON
+    })
+    .then(response => response.json())   // Parse the JSON response
+    .then(data => {
+        // Handle the response from the server (success)
+        console.log('Success:', data);
+        document.querySelector('.sent-message').style.display = 'block';
+    })
+    .catch((error) => {
+        // Handle errors (e.g., failed request)
+        console.error('Error:', error);
+        document.querySelector('.error-message').style.display = 'block';
+    });
+});
+</script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
