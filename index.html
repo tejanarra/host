@@ -318,7 +318,7 @@
       </div>
 
     <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-    <form id="contactForm1" action="javascript:void(0);" method="POST" class="php-email-form">
+    <form id="contactForm" action="javascript:void(0);" method="POST" role="form" class="php-email-form">
         <div class="row">
             <div class="form-group col-md-6">
                 <label for="name">Your Name</label>
@@ -339,8 +339,8 @@
         </div>
         <div class="my-3">
             <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
+            <div class="error-message" style="display: none;">Something went wrong. Please try again later.</div>
+            <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
         </div>
         <div class="text-center"><button type="submit">Send Message</button></div>
     </form>
@@ -358,20 +358,23 @@
 
   <!-- Vendor JS Files -->
   <script>
-document.getElementById('contactForm1').addEventListener('submit', function(event) {
+document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the form from submitting the default way
+
+    // Clear previous messages
+    document.querySelector('.sent-message').style.display = 'none';
+    document.querySelector('.error-message').style.display = 'none';
+    document.querySelector('.loading').style.display = 'block';
 
     // Capture the form data
     var formData = new FormData(this);
 
     // Create an object to send with the proper keys
     var requestData = {
-      "data": {
         yourName: formData.get('name'),       // Capture 'name' field and map to 'yourName'
         yourEmail: formData.get('email'),     // Capture 'email' field and map to 'yourEmail'
         subject: formData.get('subject'),     // Capture 'subject' field
-        message: formData.get('message')  
-      }// Capture 'message' field
+        message: formData.get('message')      // Capture 'message' field
     };
 
     // Send the data using Fetch API
@@ -382,15 +385,22 @@ document.getElementById('contactForm1').addEventListener('submit', function(even
         },
         body: JSON.stringify(requestData) // Send the data as JSON
     })
-    .then(response => response.json())   // Parse the JSON response
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();   // Parse the JSON response if successful
+    })
     .then(data => {
         // Handle the response from the server (success)
         console.log('Success:', data);
+        document.querySelector('.loading').style.display = 'none';
         document.querySelector('.sent-message').style.display = 'block';
     })
     .catch((error) => {
         // Handle errors (e.g., failed request)
         console.error('Error:', error);
+        document.querySelector('.loading').style.display = 'none';
         document.querySelector('.error-message').style.display = 'block';
     });
 });
