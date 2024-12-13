@@ -1,0 +1,22 @@
+html, body {
+  background: url('/public/background2.jpg') no-repeat center center fixed;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 57px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}

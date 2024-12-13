@@ -1,0 +1,136 @@
+
+.background-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.background-content {
+  display: flex;
+  flex-direction: column; /* Title at the top, sections below */
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 0.1); /* Glass effect for content */
+  padding: 40px;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  backdrop-filter: blur(12px); /* Glass effect with blur */
+  width: 100%;
+}
+
+.background-sections {
+  display: flex;
+  flex-direction: column; /* Stack Education and Experience sections vertically */
+  width: 100%;
+}
+
+.background-section-left,
+.background-section-right {
+  width: 100%; /* Full width for each section in mobile view */
+  padding: 20px;
+}
+
+.milestone-line {
+  width: 2px;
+  background-color: #f5a623;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  border-bottom: 2px solid #f5a623;
+  padding-bottom: 5px;
+  margin-bottom: 1.5rem;
+}
+
+/* Education and Experience styling */
+.education-item,
+.experience-item {
+  margin-bottom: 1.5rem;
+}
+
+.education-item h4,
+.experience-item h4 {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.education-item p,
+.experience-item p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: white;
+}
+
+.education-item ul,
+.experience-item ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: white;
+}
+
+.education-item ul li,
+.experience-item ul li {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* Styling for the entire section */
+.background-section h2 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.background-content .intro {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .background-content {
+    flex-direction: column; /* Stack sections vertically on mobile */
+    padding: 30px;
+  }
+
+  .background-sections {
+    flex-direction: column; /* Stack Education and Experience sections vertically */
+    align-items: center; /* Center sections vertically */
+  }
+
+  .background-section-left,
+  .background-section-right {
+    width: 100%; /* Full width on mobile */
+    padding: 10px; /* Reduce padding for mobile */
+  }
+
+  .section-title {
+    font-size: 1.8rem; /* Adjust title size on mobile */
+  }
+
+  .milestone-line {
+    display: none; /* Hide milestone line on mobile */
+  }
+
+  .education-item h4,
+  .experience-item h4 {
+    font-size: 1.3rem;
+  }
+
+  .education-item p,
+  .experience-item p {
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+}

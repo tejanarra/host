@@ -1,0 +1,103 @@
+/* Hero Section */
+.section-hero {
+  background: url('/public/bg.jpg') no-repeat center center fixed;
+  background-size: cover; /* Ensures the background image covers the section */
+  height: 100vh;
+  color: black;
+  
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px; /* Add some padding to the sides */
+}
+
+.text-left {
+  color: black;
+  text-align: left;
+  max-width: 600px; /* Limits text width for better readability */
+}
+
+.display-4 {
+  font-size: 3.5rem; /* Large title size */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.writing {
+  font-size: 1.8rem; 
+  margin-bottom: 20px;
+  color: black;
+}
+
+/* .contact-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+  
+}
+
+.contact-icon {
+  font-size: 2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  color: black;
+}
+
+.contact-icon:hover {
+  color: rgb(49, 66, 62);
+  transform: scale(1.1);
+} */
+
+.profile-image {
+  width: 40%;
+  text-align: center;
+}
+
+.profile-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 5px solid #fff;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 80%; /* Adjust profile image width on mobile */
+    margin-top: 20px;
+  }
+
+  .display-4 {
+    font-size: 2.5rem;
+  }
+
+  .writing {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .contact-info {
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .contact-icon {
+    font-size: 1.8rem;
+  }
+
+  .text-left {
+    padding-right: 0;
+    text-align: center;
+  }
+}

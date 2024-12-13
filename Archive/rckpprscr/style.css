@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+h1{
+    font-size: 100px;
+    color: hsl(181, 88%, 31%);
+    text-align: center;
+    background-color: #ffdab9;
+}
+
+.choice {
+    height: 165px;
+    width: 165px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+img:hover {
+    cursor: pointer;
+    background-color: #081b31;
+    color: aliceblue;
+    opacity: 75%;
+    
+  }
+
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    gap: 5rem;
+  }
+
+.choices{
+display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  gap: 5rem;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 5rem;
+  }
+  
+  #user-score,
+  #comp-score {
+    font-size: 4rem;
+  }
+
+  .msg-container {
+    margin-top: 5rem;
+  }
+
+  #msg {
+    background-color: #081b31;
+    color: #fff;
+    font-size: 2rem;
+    display: inline;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  h2{
+    font-size: 50px;
+    margin-top: 5rem;
+  }
+
+  /* For screens smaller than 600px (typical smartphones) */
+@media only screen and (max-width: 600px) {
+  h1 {
+      font-size: 50px; /* Decrease font size for heading */
+  }
+
+  .choice {
+      height: 100px; /* Decrease height for choices */
+      width: 100px; /* Decrease width for choices */
+      gap: 2rem; /* Decrease gap between choices */
+  }
+
+  img {
+      height: 80px; /* Decrease height for images */
+      width: 80px; /* Decrease width for images */
+  }
+
+  .choices {
+      flex-direction: column; /* Stack choices vertically */
+      margin-top: 2rem; /* Adjust margin for choices */
+      gap: 2rem; /* Decrease gap between choices */
+  }
+
+  .score-board {
+      flex-direction: column; /* Stack score board vertically */
+      margin-top: 2rem; /* Adjust margin for score board */
+      gap: 2rem; /* Decrease gap between score board items */
+  }
+
+  #user-score,
+  #comp-score {
+      font-size: 2rem; /* Decrease font size for scores */
+  }
+
+  .msg-container {
+      margin-top: 2rem; /* Adjust margin for message container */
+  }
+
+  #msg {
+      font-size: 1.5rem; /* Decrease font size for message */
+      padding: 1rem; /* Adjust padding for message */
+  }
+
+  h2 {
+      font-size: 30px; /* Decrease font size for secondary heading */
+      margin-top: 2rem; /* Adjust margin for secondary heading */
+  }
+}

@@ -1,0 +1,100 @@
+.contact-content {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  /* Centering form and heading */
+}
+
+.contact-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contact-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #ecf0f1;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.1); /* Light glass background */
+  border-radius: 15px;  /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow around form */
+  backdrop-filter: blur(12px); /* Glass effect with more blur */
+}
+
+.form-input, .form-textarea {
+  padding: 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(53, 67, 66, 0.386); /* Slightly darker glass effect */
+  color: #ffffff;  /* Light text color */
+  font-weight: 500;
+  backdrop-filter: blur(8px); /* Glass blur */
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.form-input::placeholder, .form-textarea::placeholder {
+  color: rgb(255, 255, 255);  /* Light placeholder color */
+  opacity: 1; /* Ensuring full opacity for placeholders */
+}
+
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.3); /* Focus effect with slight change */
+  transform: scale(1.05); /* Slight zoom on focus */
+}
+
+.form-textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+.form-button {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3498db, #2980b9); /* Gradient background */
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.form-button:hover {
+  background: linear-gradient(135deg, #2980b9, #3498db); /* Reverse gradient on hover */
+  transform: translateY(-3px); /* Button lift effect */
+}
+
+.form-button:active {
+  transform: translateY(1px); /* Button depression effect on click */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .form-input, .form-textarea, .form-button {
+    width: 100%;
+  }
+
+  .contact-content h2 {
+    font-size: 2.2rem;
+  }
+}
+
+
