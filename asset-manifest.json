@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/tejanarra/host/static/css/main.e5b0386c.css",
-    "main.js": "/tejanarra/host/static/js/main.fec5e1d7.js",
-    "static/media/bg.jpg": "/tejanarra/host/static/media/bg.58eefaae7cf94919b9d4.jpg",
-    "static/media/background2.jpg": "/tejanarra/host/static/media/background2.04d7d512703abccf7c8a.jpg",
-    "index.html": "/tejanarra/host/index.html",
-    "main.e5b0386c.css.map": "/tejanarra/host/static/css/main.e5b0386c.css.map",
-    "main.fec5e1d7.js.map": "/tejanarra/host/static/js/main.fec5e1d7.js.map"
+    "main.css": "/host/static/css/main.f4eac8b3.css",
+    "main.js": "/host/static/js/main.fec5e1d7.js",
+    "static/media/bg.jpg": "/host/static/media/bg.58eefaae7cf94919b9d4.jpg",
+    "static/media/background2.jpg": "/host/static/media/background2.04d7d512703abccf7c8a.jpg",
+    "index.html": "/host/index.html",
+    "main.f4eac8b3.css.map": "/host/static/css/main.f4eac8b3.css.map",
+    "main.fec5e1d7.js.map": "/host/static/js/main.fec5e1d7.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5b0386c.css",
+    "static/css/main.f4eac8b3.css",
     "static/js/main.fec5e1d7.js"
   ]
 }
