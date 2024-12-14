@@ -1,7 +1,13 @@
-html, body {
-  background: url('/public/background2.jpg') no-repeat center center fixed;
+/* App.css */
+body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: black;
+  background-size: cover;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;  
 }
 
 .app-container {
@@ -14,9 +20,29 @@ html, body {
   overflow-x: hidden;
 }
 
-.section{
+.section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10%;
+  padding: 5%;
+}
+
+@media (min-width: 1024px) {  
+  body {
+    background: url('/public/background2.jpg') no-repeat center center fixed;
+    background-size: auto;  
+
+  }
+}
+
+@media (max-width: 768px) {  
+  body {
+    background-size: cover; 
+    overflow-x: hidden; 
+  }
+
+  .main-content {
+    margin-left: 40px;
+    overflow-x: hidden;
+  }
 }

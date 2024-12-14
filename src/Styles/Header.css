@@ -1,3 +1,4 @@
+/* Sidebar Navbar */
 .sidebar-navbar {
   position: fixed;
   top: 0;
@@ -5,12 +6,25 @@
   background: rgba(1, 1, 1, 0.5);
   height: 100vh;
   width: 57px;
+  display: flex;
+  flex-direction: column; /* Stack the nav items and contact info vertically */
+  justify-content: space-between; /* Ensure nav items stay at the top, and contact info at the bottom */
 }
 
+/* Navbar Container */
 .sidebar-navbar-container {
+  display: flex;
+  flex-direction: column;
   padding-top: 30px;
+  flex-grow: 1;  /* Ensure nav items take up available space */
 }
 
+.sidebar-nav-list {
+  margin-bottom: 10px; /* Reduce the bottom margin to fit contact icons */
+  flex-grow: 1; /* Allow the navigation to take up available space */
+}
+
+/* Sidebar Navigation Links */
 .sidebar-nav-link {
   display: block;
   color: #456571;
@@ -19,7 +33,7 @@
   padding: 0.5rem;
   transition: color 0.3s ease;
   writing-mode: vertical-rl;
-  transform: rotate(180deg);
+  transform: rotate(180deg); /* Keep the links vertical */
 }
 
 .sidebar-nav-link:hover,
@@ -30,26 +44,44 @@
   cursor: pointer;
 }
 
-
-/* Contact Info - Positioned at the bottom */
+/* Contact Info */
 .contact-info {
   display: flex;
   flex-direction: column; /* Stack the icons vertically */
   align-items: center;
-  position: absolute;
-  bottom: 0.5rem; /* Positioning it at the bottom of the sidebar */
-  width: 100%;
+  margin-top: 10px; /* Reduced space between nav items and contact icons */
+  margin-bottom: 10px; /* Add space at the bottom */
+  flex-shrink: 0; /* Prevent the contact info from shrinking */
 }
 
-/* Styling for individual contact icons */
+/* Individual Contact Icon */
 .contact-icon {
   color: #456571;
-  font-size: 1rem;
-  margin: 0.5rem 0; /* Space between the icons */
-
+  font-size: 1.25rem; /* Default size for icons */
   transition: color 0.3s ease;
 }
 
 .contact-icon:hover {
   color: white; /* Change color on hover */
+}
+
+/* Mobile and Small Screen Adjustments */
+@media (max-width: 768px) {
+  .sidebar-navbar {
+    width: 40px; /* Increase sidebar width slightly to accommodate smaller icons */
+  }
+
+  /* Reduce font size of nav links for mobile */
+  .sidebar-nav-link {
+    font-size: 1rem; /* Smaller font size */
+  }
+
+  .contact-info {
+    margin-top: 10px; /* Ensure there's space between nav items and icons */
+    position: relative;
+  }
+
+  .contact-icon i {
+    font-size: 1rem; /* Force the smaller size */
+  }
 }

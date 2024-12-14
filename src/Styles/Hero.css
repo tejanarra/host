@@ -35,47 +35,16 @@
   color: black;
 }
 
-/* .contact-info {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  margin-top: 20px;
-  
-}
-
-.contact-icon {
-  font-size: 2rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-  color: black;
-}
-
-.contact-icon:hover {
-  color: rgb(49, 66, 62);
-  transform: scale(1.1);
-} */
-
-.profile-image {
-  width: 40%;
-  text-align: center;
-}
-
-.profile-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  border: 5px solid #fff;
-}
-
 /* Mobile Styles */
 @media (max-width: 768px) {
+  .section-hero {
+    background: url('/public/bg.jpg') no-repeat center;
+    background-size: cover; /* Ensures the background image covers the section */
+    color: black;
+  }
   .hero-content {
     flex-direction: column;
     text-align: center;
-  }
-
-  .profile-image {
-    width: 80%; /* Adjust profile image width on mobile */
-    margin-top: 20px;
   }
 
   .display-4 {
@@ -87,14 +56,7 @@
     margin-bottom: 15px;
   }
 
-  .contact-info {
-    justify-content: center;
-    gap: 25px;
-  }
-
-  .contact-icon {
-    font-size: 1.8rem;
-  }
+ 
 
   .text-left {
     padding-right: 0;

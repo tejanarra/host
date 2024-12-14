@@ -1,6 +1,6 @@
 /* About Section Styles */
 .about-section {
-  padding: 60px 20px;
+  /* padding: 60px 20px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,11 +25,15 @@
 .profile-image {
   margin-right: 30px; /* Space between image and text */
   flex-shrink: 0; /* Prevent the image from shrinking */
+  width: 40%;
+  text-align: center;
 }
 
 .profile-image img {
   object-fit: cover; /* Ensures the image covers the container */
-  border: 5px solid #fff; /* White border around the image */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .about-text {
@@ -89,6 +93,8 @@
   .profile-image {
     margin-right: 0; /* Remove right margin on mobile */
     margin-bottom: 20px; /* Add margin below the image */
+    width: 80%; /* Adjust profile image width on mobile */
+    margin-top: 20px;
   }
 
   .about-content h2 {

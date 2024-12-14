@@ -1,12 +1,13 @@
 import React from "react";
 import "../Styles/About.css";
+import profileImage from "../assets/profile.webp"
 
 const About = () => {
   return (
     <section id="about" className="section about-section">
       <div className="about-content">
         <div className="profile-image">
-          <img src="/profile.jpg" alt="Profile" />
+          <img src={profileImage} alt="Profile" />
         </div>
         <div className="about-text">
           <h2>About Me</h2>

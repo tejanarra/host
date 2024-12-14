@@ -67,30 +67,32 @@ const Header = () => {
             </Link>
           </li>
         </ul>
+
+        {/* Contact Info */}
         <div className="contact-info">
-            <a href={`mailto:narrateja9699@gmail.com`} className="contact-icon">
-              <i className="fas fa-envelope"></i>
-            </a>
-            <a href={`tel:+13125937394`} className="contact-icon">
-              <i className="fas fa-phone-alt"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/teja-narra/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-icon"
-            >
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a
-              href="https://github.com/tejanarra"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-icon"
-            >
-              <i className="fab fa-github"></i>
-            </a>
-          </div>
+          <a href="mailto:narrateja9699@gmail.com" className="contact-icon">
+            <i className="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+13125937394" className="contact-icon">
+            <i className="fas fa-phone-alt"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/tejanarra/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-icon"
+          >
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/tejanarra"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-icon"
+          >
+            <i className="fab fa-github"></i>
+          </a>
+        </div>
       </nav>
     </header>
   );
